@@ -7,7 +7,6 @@ function Greetings(children) {
         {children.lang === 'es' ? 'Ola' : ''}
         {children.lang === 'fr' ? 'Salut' : ''}
       </b>
-      {', '}
 
       {children.children}
     </div>
