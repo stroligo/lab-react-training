@@ -1,27 +1,55 @@
-function IdCard({ lastName, firstName, gender, height, birth, picture }) {
+import Rating from './Rating';
+
+function IdCard(props) {
   return (
     <div className="IdCard">
       <div className="picture">
-        <img src={picture} alt="{firstName}" />
+        <img src={props.picture} alt="{props.firstName}" />
       </div>
 
       <div className="infos">
-        <h6>Infos:</h6>
         <div>
-          <b>First Name:</b> {firstName}
+          <b>Name:</b> {props.firstName}
         </div>
-        <div>
-          <b>Last Name:</b> {lastName}
-        </div>
-        <div>
-          <b>Gender:</b> {gender}
-        </div>
-        <div>
-          <b>Height:</b> {height}
-        </div>
-        <div>
-          <b>Birth:</b> {birth}
-        </div>
+        {props.lastName != null ? (
+          <div>
+            <b>Last Name:</b> {props.lastName}
+          </div>
+        ) : (
+          ''
+        )}
+        {props.gender != null ? (
+          <div>
+            <b>Gender:</b> {props.gender}
+          </div>
+        ) : (
+          ''
+        )}
+        {props.height != null ? (
+          <div>
+            <b>Height:</b> {props.height}
+          </div>
+        ) : (
+          ''
+        )}
+
+        {props.birth != null ? (
+          <div>
+            <b>Birth:</b> {props.birth}
+          </div>
+        ) : (
+          ''
+        )}
+
+        {props.rating != null ? <Rating>{props.rating}</Rating> : ''}
+
+        {props.car != null ? (
+          <div>
+            {props.car.model} | <b>{props.car.licensePlate}</b>
+          </div>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );

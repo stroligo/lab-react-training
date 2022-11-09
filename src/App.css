@@ -42,12 +42,20 @@ section {
   border-radius: 5px;
 }
 .IdCard img {
-  width: 100%;
   border-radius: 5px;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
 }
 @media only screen and (max-width: 820px) {
   .IdCard .picture {
     min-width: 100%;
+  }
+  .IdCard img {
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
   }
 }
 .IdCard .infos {
@@ -100,20 +108,69 @@ section {
   padding: 0.5rem;
   border-radius: 10px;
 }
-
 /* ITERATION #5 */
 .CreditCard {
-  width: 30%;
+  width: 29%;
   color: #202534;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
+
   padding: 1rem;
   border-radius: 10px;
+}
+.CreditCard .icon {
+  text-align: right;
+}
+.CreditCard .icon svg {
+  width: 50px;
+  height: 50px;
+}
+.CreditCard .number {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 1rem;
+}
+.CreditCard .infos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.CreditCard .name {
+  font-size: 1.3rem;
 }
 @media only screen and (max-width: 820px) {
   .CreditCard {
     width: 100%;
   }
+}
+/* ITERATION #6 */
+.Rating {
+  background: #202534;
+  width: fit-content;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.Rating .star {
+  font-size: 25px;
+  margin-right: 10px;
+}
+/* ITERATION #7 Não precisou de CSS */
+/* ITERATION #8 */
+.LikeButton button {
+  width: fit-content;
+  font-height: bold;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  display: flex;
+}
+.LikeButton button svg {
+  margin-right: 3px;
+}
+/* ITERATION #9 */
+.ClickPicture img {
+  max-width: 100%;
 }
