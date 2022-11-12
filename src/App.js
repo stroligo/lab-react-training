@@ -8,6 +8,7 @@ import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import LikeButton from './components/LikeButton';
 import ClickablePicture from './components/ClickablePicture';
+import Test from './components/Test';
 
 function App() {
   return (
@@ -141,6 +142,12 @@ function App() {
               img="maxence.png"
               imgClicked="maxence-glasses.png"
             />
+          </div>
+        </section>
+        <section>
+          <h5>Iteração 9</h5>
+          <div className="areaflex">
+            <Test />
           </div>
         </section>
       </div>
